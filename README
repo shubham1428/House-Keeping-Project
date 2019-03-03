@@ -1,0 +1,27 @@
+Following steps are required for running the project:
+
+1. Install pip with command "sudo apt install python-pip"
+2. Install dependencies from requirements.txt using command "pip install -r /path/to/requirements.txt"
+3. Create a superuser using command "python manage.py createsuperuser". Fill in the necessary details.
+4. With this superuser, you can login in the system and access the Admin entity's functions.
+5. Without login, only urls:
+    /get-tasks-for-worker/{workerId}, /assets/all
+    will work.
+
+How to Run:
+
+1. Run command "python manage.py runserver" from within the project directory (<directory-path>/housekeeping/)
+2. Hit the following urls:
+    127.0.0.1:8000/hkmanagement/add-asset                   Only works if login
+    127.0.0.1:8000/hkmanagement/add-task                    Only works if login
+    127.0.0.1:8000/hkmanagement/add-worker                  Only works if login
+    127.0.0.1:8000/hkmanagement/assets/all
+    127.0.0.1:8000/hkmanagement/allocate-task               Only works if login
+    127.0.0.1:8000/hkmanagement/get-tasks-for-worker/{workerId}
+
+    Anytime not being logged in while accessing Admin functions will redirect to login page.
+    Login can be done by superuser credentials.
+    For hitting admin panel, hit this url: 127.0.0.1:8000/admin
+    You can log out from this panel to check logout out functionalities of the website.
+
+That would be it.
