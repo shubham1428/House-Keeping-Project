@@ -1,0 +1,10 @@
+<h1>Tasks for Worker with id: {{workerid}} </h1>
+<ul>
+    {% if taskscount %}
+        {% for task in tasks %}
+            <li>{{task.assetid}}:{{task.taskname}}</li>
+        {% endfor %}
+    {% else %}
+        Presently no tasks for this worker
+    {% endif %}
+</ul>
